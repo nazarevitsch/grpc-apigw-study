@@ -1,0 +1,11 @@
+server:
+  port: 8040
+
+grpc:
+  client:
+    account-service:
+      address: static://localhost:8041
+      negotiationType: plaintext
+    order-service:
+      address: static://localhost:8041
+      negotiationType: plaintext

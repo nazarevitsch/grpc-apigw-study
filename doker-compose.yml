@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  database:
+    container_name: database-grpc
+    image: postgres:15.0
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: grpc_study
+      PGDATA: /data
+    ports:
+      - '5468:5432'
+    volumes:
+      - ./database_data:/data
